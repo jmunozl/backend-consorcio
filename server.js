@@ -1,7 +1,7 @@
 require('dotenv').config()
 const app = require('./config/app')
 const connectDatabaseH = require('./database/mongodb')
-const { appConfig, dbConfig } = require('./config/config')
+const { appConfig, dbConfig,dbConfigH } = require('./config/config')
 
 async function initApp (appConfig,dbConfig) {
   try {
@@ -15,6 +15,6 @@ async function initApp (appConfig,dbConfig) {
   }
 }
 
-initApp(appConfig, dbConfig)
+initApp(appConfig, dbConfigH)
 
 

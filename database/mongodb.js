@@ -27,9 +27,8 @@ async function connectDatabase ({ host, port, dbName }) {
 }
 
 async function connectDatabaseH ({ url }) {
-  const uri = `mongodb://${url}`
-  await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  await mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 }
 
-module.exports = connectDatabase
+module.exports = connectDatabaseH
